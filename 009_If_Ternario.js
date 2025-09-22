@@ -12,3 +12,4 @@ const aprovado = true;
 //Operador Ternário
     mensagem = aprovado ? 'Aprovado' : 'Reprovado';
     console.log(mensagem);
+    
