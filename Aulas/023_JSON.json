@@ -1,0 +1,14 @@
+{
+    "nome": "Gabriel",
+    "idade":16,
+    "turma": {
+        "nome_turma": "2°B",
+        "ano": 2025
+
+    },
+    "notas": {  
+
+    }
+
+
+}
