@@ -1,5 +1,5 @@
 const celciusPfahrenheit = (celcius) => {
-const fah = (celsius * 9/5) + 32;
+const fah = (celcius * 9/5) + 32;
 const objRetorno = {
     celcius: celcius
 }
