@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "openai": "^5.22.1",
     "prompt-sync": "^4.2.0"
   }
 }
