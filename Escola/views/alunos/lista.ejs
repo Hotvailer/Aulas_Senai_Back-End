@@ -1,0 +1,77 @@
+<%- include('../includes/header.ejs', { titulo: "Dashboard"}) %>
+
+<main>
+    <h2 class="titulo-p1">Lista de Alunos</h2>
+    <a href="/alunos/novo" class="Adicionar">Adicionar Aluno</a>
+
+    <form action="/alunos/listar" method="get" class="forms form-consulta">
+    <input type="text" name="busca" placeholder="Buscar por Nome ou Turma">
+    <select name="ordem">
+        <option value="nome">Ordenar por Nome</option>
+        <option value="nome_turma">Ordenar por Turma</option>
+        <option value="idade" >Ordenar por Idade</option>
+    </select>
+    <button type="submit" class="btnn btn-principal">Buscar</button>
+    </form>
+
+    <section class="lista-cards">
+        <% for(let alunos of dadosAlunos) { %>
+            <div class="card-aluno">
+                <img src="<%= alunos.foto %>" alt="">
+                <h2 class="nome-aluno"><%= alunos.nome %></h2>
+                <p><%= alunos.nome_turma %></p>
+                <div class="corpo">
+                    <a href="/alunos/editar/<%= alunos.id_aluno %>" >
+                        <button class=" btn btn-editar">Editar</button></a>
+                    <form action="/alunos/excluir/<%= alunos.id_aluno %>" method="post">
+                        <button type="submit" class="btn btn-excluir">Excluir</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <% } %>
+    </section>
+    <table class="dados-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Email</th>
+                <th>Cpf</th>
+                <th>Sexo</th>
+                <th>Turma</th>
+                <th>Ativo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let alunos of dadosAlunos) { %>
+            <tr>
+                <td> <%= alunos.nome %></td>
+                <td> <%= alunos.idade %></td>
+                <td> <%= alunos.email %></td>
+                <td> <%= alunos.cpf %></td>
+                <td> <%= alunos.sexo %></td>
+                <td> <%= alunos.nome_turma %></td>
+                <td> <%= alunos.ativo%>
+                </td>
+                <td class="corpo">
+                    <a href="/alunos/editar/<%= alunos.id_aluno %>" >
+                        <button class=" btnn btn-editar">Editar</button></a>
+                    <form action="/alunos/excluir/<%= alunos.id_aluno %>" method="post">
+                        <button type="submit" class="btnn btn-excluir">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</main>
+
+
+
+
+
+
+<%- include('../includes/footer.ejs') %>

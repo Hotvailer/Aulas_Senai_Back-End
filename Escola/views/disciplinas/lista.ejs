@@ -1,0 +1,51 @@
+<%- include('../includes/header.ejs', { titulo: "Dashboard"}) %>
+
+<main>
+    <h2 class="titulo-p1">Lista de Disciplinas</h2>
+    <a href="/disciplinas/novo" class="Adicionar">Adicionar Disciplina</a>
+
+    <form action="/disciplinas/listar" method="get" class="forms form-consulta">
+    <input type="text" name="busca" placeholder="Buscar por Nome ou Professor">
+    <select name="ordem">
+        <option value="nome_disciplina">Ordenar por Disciplina</option>
+        <option value="nome_professor">Ordenar por Professor</option>
+
+    </select>
+    <button type="submit" class="btnn btn-principal">Buscar</button>
+    </form>
+
+    <table class="dados-table">
+        <thead>
+            <tr>
+                <th>Disciplina</th>
+                <th>Professor</th>
+                <th>Ativo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let disciplinas of dadosDisciplinas) { %>
+            <tr>
+                <td> <%= disciplinas.nome_disciplina %></td>
+                <td> <%= disciplinas.nome_professor %></td>
+                <td> <%= disciplinas.ativo %></td>
+                </td>
+                <td class="corpo">
+                    <a href="/disciplinas/editar/<%= disciplinas.id_disciplina %>" >
+                        <button class=" btnn btn-editar">Editar</button></a>
+                    <form action="/disciplinas/excluir/<%= disciplinas.id_disciplina %>" method="post">
+                        <button type="submit" class="btnn btn-excluir">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</main>
+
+
+
+
+
+
+<%- include('../includes/footer.ejs') %>

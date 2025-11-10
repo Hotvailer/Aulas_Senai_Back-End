@@ -1,0 +1,45 @@
+<%- include('../includes/header.ejs', { titulo: "Dashboard"}) %>
+
+<main>
+    <h2 class="titulo-p1">Lista de Turma</h2>
+    <a href="/turmas/novo" class="Adicionar">Adicionar Turma</a>
+
+    <form action="/turmas/listar" method="get" class="forms form-consulta">
+    <input type="text" name="busca" placeholder="Buscar por nome_turma">
+    <select name="ordem">
+        <option value="nome_turma">Ordenar por Turma</option>
+    </select>
+    <button type="submit" class="btnn btn-principal">Buscar</button>
+    </form>
+
+    <table class="dados-table">
+        <thead>
+            <tr>
+                <th>Nome Da Turma</th>
+                <th>Ativo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let turmas of dadosTurmas) { %>
+            <tr>
+                <td> <%= turmas.nome_turma %></td>
+                <td> <%= turmas.ativo %></td>
+                <td class="corpo">
+                    <a href="/turmas/editar/<%= turmas.id_turma %>" class=" btnn btn-editar">Editar</a>
+                    <form action="/turmas/excluir/<%= turmas.id_turma %>" method="post">
+                        <button type="submit" class=" btnn btn-excluir">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</main>
+
+
+
+
+
+
+<%- include('../includes/footer.ejs') %>

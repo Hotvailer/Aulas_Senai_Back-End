@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+
+body {
+    font-family: Arial, Sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(0, 94, 255);
+    color: white;
+    padding: 15px;
+    box-shadow: 0px 5px 10px rgb(114, 114, 114);
+    text-align: center;
+}
+
+nav a>a:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+footer {
+    background-color: rgb(27, 118, 255);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.dados-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+
+}
+
+.dados-table>thead {
+    background-color: rgb(0, 102, 255);
+    color: white;
+}
+
+.dados-table th,
+.dados-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    height: 80px;
+
+}
+
+.Adicionar {
+    background-color: rgb(0, 38, 255);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.titulo-p1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 39px;
+    font-family: "Playfair Display", serif;
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+
+.form {
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgb(164, 164, 164);
+    padding: 10px 15px;
+    width: 500px;
+    height: 370px;
+    font-size: 20px;
+    justify-content: space-between;
+    height: auto;
+}
+
+.form2 {
+    margin: auto;
+    text-align: center;
+    width: 500px;
+    height: max-content;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgb(164, 164, 164);
+    padding: 10px 15px;
+}
+
+.form1 {
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgb(164, 164, 164);
+    padding: 10px 15px;
+    width: 500px;
+    height: 220px;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.form-group label {
+    display: block;
+}
+
+.form-group input {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.form-group select {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.form-group input:focus {
+    border-color: aqua;
+}
+
+select {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: black;
+}
+
+.btn-principal {
+    padding: 5px 5px;
+    background-color: rgb(0, 132, 255);
+}
+
+.btn {
+    margin-right: 10px;
+    color: white;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: solid;
+    padding: 10px 9px;
+}
+
+.btn:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btn-secundario {
+    background-color: rgb(144, 144, 144);
+    padding: 13px 10px;
+}
+
+.btn-editar {
+    background-color: rgb(0, 199, 0);
+    padding: 9px 10px;
+    font-size: 20px;
+}
+
+
+.btn-excluir {
+    background-color: rgb(255, 0, 0);
+    padding: 8.5px 5px;
+}
+
+
+.corpo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.lista-cards{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-aluno{
+    background-color: #fff;
+    width: 200px;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-aluno > img{
+    width: 96px;
+    height: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btnn {
+    margin-right: 10px;
+    color: white;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: solid;
+}
+.btnn:hover {
+    color: black;
+    
+}
+
+.form-consulta > input, .form-consulta > select{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-consulta{
+    display: flex;
+    gap: 10px;
+}
+
+.forms{
+     text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgb(164, 164, 164);
+    padding: 10px 15px;
+width: fit-content;
+    font-size: 20px;
+}
